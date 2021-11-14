@@ -28,14 +28,15 @@ class GooglePlaceAutocompleteInjectorAwareTypeExtension extends AbstractTypeExte
         $this->libraryCommand     = $libraryCommand;
     }
 
+
     /**
-     * Returns the name of the type being extended.
+     * Gets the extended types
      *
-     * @return string The name of the type being extended
+     * @return iterable
      */
-    public function getExtendedType()
+    public static function getExtendedTypes() : iterable
     {
-        return FormType::class;
+        return [FormType::class];
     }
 
     /**
